@@ -6,10 +6,13 @@ const { User } = require('./../models/models');
 passport.use('register', new localStrategy({
     usernameField: 'username',
     passwordField: 'password',
-    session: false
-}, async (username, password, done) => {
+    session: false,
+    passReqToCallback: true
+}, async (req, username, password, done) => {
     try {
-        const user = await User.create({username, password});
+        const firstName = req.body.firstName;
+        const lastName = req.body.lastName;
+        const user = await User.create({firstName, lastName, username, password});
         return done(null, user);
     } catch(err) {
         logger.error(`An error occured: ${err}`);

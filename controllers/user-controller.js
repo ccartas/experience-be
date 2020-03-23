@@ -21,6 +21,8 @@ const loginUser = async (req, res, next) => {
                 const token = jwt.sign({user: body}, 'angular_upskilling');
                 return res.json({
                     user_id: user._id,
+                    firstName: user.firstName,
+                    lastName: user.lastName,
                     username: user.username,
                     token,
                 })

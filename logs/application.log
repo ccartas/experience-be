@@ -169,3 +169,16 @@
 [INFO][2020-03-22 17:08:11]: 	Server started on port 8090
 [INFO][2020-03-22 17:08:24]: 	Server started on port 8090
 [ERROR][2020-03-22 17:08:27]: 	An error occured: MongoError: E11000 duplicate key error collection: experience-db.users index: username_1 dup key: { : "cartas.cosmin@gmail.com" }
+[INFO][2020-03-23 07:41:18]: 	Server started on port 8090
+[INFO][2020-03-23 07:41:35]: 	Server started on port 8090
+[INFO][2020-03-23 10:36:39]: 	Server started on port 8090
+[INFO][2020-03-23 10:36:45]: 	Server started on port 8090
+[INFO][2020-03-23 10:37:15]: 	Server started on port 8090
+[INFO][2020-03-23 10:43:26]: 	Server started on port 8090
+[INFO][2020-03-23 10:43:30]: 	Server started on port 8090
+[INFO][2020-03-23 10:43:54]: 	Server started on port 8090
+[INFO][2020-03-23 10:44:03]: 	Server started on port 8090
+[INFO][2020-03-23 10:44:21]: 	Server started on port 8090
+[ERROR][2020-03-23 10:47:58]: 	An error occured: MongoError: E11000 duplicate key error collection: experience-db.users index: username_1 dup key: { : "cartas.cosmin@gmail.com" }
+[ERROR][2020-03-23 10:48:38]: 	An error occured: MongoError: E11000 duplicate key error collection: experience-db.users index: username_1 dup key: { : "cartas.cosmin@gmail.com" }
+[INFO][2020-03-23 11:13:18]: 	Server started on port 8090

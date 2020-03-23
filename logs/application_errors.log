@@ -10,3 +10,5 @@
 }]
 [ERROR][2020-03-22 16:29:01]: 	connect ECONNREFUSED 127.0.0.1:27017
 [ERROR][2020-03-22 17:08:27]: 	An error occured: MongoError: E11000 duplicate key error collection: experience-db.users index: username_1 dup key: { : "cartas.cosmin@gmail.com" }
+[ERROR][2020-03-23 10:47:58]: 	An error occured: MongoError: E11000 duplicate key error collection: experience-db.users index: username_1 dup key: { : "cartas.cosmin@gmail.com" }
+[ERROR][2020-03-23 10:48:38]: 	An error occured: MongoError: E11000 duplicate key error collection: experience-db.users index: username_1 dup key: { : "cartas.cosmin@gmail.com" }
