@@ -1,0 +1,12 @@
+[ERROR][2020-03-22 12:27:42]: 	failed to connect to server [127.0.0.1:27017] on first connect [Error: connect ECONNREFUSED 127.0.0.1:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1137:16) {
+  name: 'MongoNetworkError',
+  [Symbol(mongoErrorContextSymbol)]: {}
+}]
+[ERROR][2020-03-22 12:28:15]: 	failed to connect to server [127.0.0.1:27017] on first connect [Error: connect ECONNREFUSED 127.0.0.1:27017
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1137:16) {
+  name: 'MongoNetworkError',
+  [Symbol(mongoErrorContextSymbol)]: {}
+}]
+[ERROR][2020-03-22 16:29:01]: 	connect ECONNREFUSED 127.0.0.1:27017
+[ERROR][2020-03-22 17:08:27]: 	An error occured: MongoError: E11000 duplicate key error collection: experience-db.users index: username_1 dup key: { : "cartas.cosmin@gmail.com" }
