@@ -28,6 +28,32 @@ const UserSchema = new Schema({
     }
 });
 
+const ExperienceSchema = new Schema({
+    startingPoint: {
+        type: String,
+        required: true
+    },
+    destination: {
+        type: String,
+        required: true
+    },
+    transportationType: {
+        type: String,
+        required: true
+    },
+    duration: {
+        type: String,
+        required: true
+    },
+    satisfactionLevel: {
+        type: String,
+        required: true
+    },
+    username: {
+        type: String
+    }
+})
+
 UserSchema.pre('save', async function(next) {
     const hash = await bcrypt.hash(this.password, 5);
     this.password = hash;
@@ -40,6 +66,8 @@ UserSchema.methods.checkUserPassword = async function(password) {
 }
 
 const User = mongoose.model('user', UserSchema);
+const Experience = mongoose.model('experience', ExperienceSchema);
 module.exports = {
-    User
+    User,
+    Experience
 };

@@ -1,6 +1,9 @@
 const passport = require('passport');
 const logger = require('./logger');
 const localStrategy = require('passport-local').Strategy;
+const JWTstrategy = require('passport-jwt').Strategy;
+const ExtractJWT = require('passport-jwt').ExtractJwt;
+
 const { User } = require('./../models/models');
 
 passport.use('register', new localStrategy({
@@ -39,3 +42,18 @@ passport.use('login', new localStrategy({
         return done(err);
     } 
 }))
+
+passport.use(new JWTstrategy({
+    //secret we used to sign our JWT
+    secretOrKey : 'angular_upskilling',
+    //we expect the user to send the token as a query parameter with the name 'secret_token'
+    jwtFromRequest : ExtractJWT.fromAuthHeaderAsBearerToken()
+  }, async (token, done) => {
+    try {
+      //Pass the user details to the next middleware
+      console.log(token);
+      return done(null, token.user);
+    } catch (error) {
+      done(error);
+    }
+  }));
