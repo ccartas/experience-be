@@ -14,6 +14,18 @@ const addExperience = async (req, res, next) => {
     }
 }
 
+const getAllExperiences = async (req, res, next) => {
+    try {
+        const experiences = await Experience.find();
+        res.status(200).send(experiences);
+    } catch(err) {
+        res.status(500).send({
+            message: 'There was a problem when requesting the experiences'
+        })
+    }
+}
+
 module.exports = {
-    addExperience
+    addExperience,
+    getAllExperiences
 }
